@@ -17,10 +17,9 @@ export class AppController {
     return this.appService.getName(name);
   }
 
-  @Post('/catch_data')
+  @Post('/generateparagraph')
   catchPostData(@Req() req: Request, @Res() res: Response, @Body() body: CatchDataDto) {
-    console.log(body)
-    return res.status(200).send('Success');
+    return this.appService.generateParagraph(body,res);
   }
 
 
