@@ -41,5 +41,4 @@ export class CustomerService {
         else
             return res.status(404).json({ status: "FAIL", message: `Customer with id ${id} not found!` })
     }
-
 }
